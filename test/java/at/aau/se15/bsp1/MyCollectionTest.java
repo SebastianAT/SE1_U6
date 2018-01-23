@@ -26,7 +26,7 @@ public class MyCollectionTest
     	MyCollection c1 = new MyCollection(5);
     	c1.add("1");
     	c1.add("2");
-    	c.remove("1");
+    	c.remove("3");
     	assertEquals(c1.cList(),c.cList());
     }
     
@@ -35,4 +35,6 @@ public class MyCollectionTest
     	MyCollection c1 = new MyCollection(5);
     	c1.remove("3");
     }
+    
+   
 }
