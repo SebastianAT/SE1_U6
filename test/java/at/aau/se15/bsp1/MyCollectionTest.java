@@ -36,6 +36,11 @@ public class MyCollectionTest
     	c1.remove("3");    // try to remove - leads to exception
     }
     
+    @Test(expected = IllegalArgumentException.class)
+    public void testRemove3() {
+        c.remove("4");		// try to remove without object - leads to exception
+    }
+    
     @Test 
     public void testEmpty() {
     	MyCollection c2 = new MyCollection(5);
