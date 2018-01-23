@@ -27,13 +27,20 @@ public class MyCollectionTest
     	c1.add("1");
     	c1.add("2");
     	c.remove("3");
-    	assertEquals(c1.cList(),c.cList());
+    	assertEquals(c1.cList(),c.cList());  // check if c1 size is c size (2)
     }
     
     @Test(expected = IllegalArgumentException.class)
     public void testRemoveWithExc() {
     	MyCollection c1 = new MyCollection(5);
-    	c1.remove("3");
+    	c1.remove("3");    // try to remove - leads to exception
+    }
+    
+    @Test 
+    public void testEmpty() {
+    	MyCollection c2 = new MyCollection(5);
+    	c.empty();
+    	assertEquals(c2.cList(),c.cList());   //check if c2 size is c size (0)
     }
     
    
